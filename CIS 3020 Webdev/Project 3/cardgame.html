@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Mystery Calculator Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+ <a class="active" href="index.htm">Home</a>
+ <a href="resume.htm">Resume</a></li>
+ <a href="goalsandobjectives.htm">Goals</a>
+ <a href="portfolio.htm">Portfolio</a>
+ <a href="interview.htm">Interview</a>
+</div>
+<div class="vertical-bar">
+<ul>
+ <li><a href="assets/TeddyFace.jpg"><img src="assets/TeddyFace.jpg"></a></li>
+ <li><a href="assets/teddyface2.jpg"><img src="assets/teddyface2.jpg"></a></li>
+ <li><a href="assets/Teddyface3.jpg"><img src="assets/Teddyface3.jpg"></a></li>
+ <li><a href="assets/teddyface4.jpg"><img src="assets/teddyface4.jpg"></a></li>
+</ul>
+</div>
+<h1>Play the Mystery Calculator Game!</h1>
+<p>Instructions: Study the cards below and pick a number from them, then use the handy form to indicate on which card(s) your number appears.</p>
+
+<p>
+<table class="trappedintable">
+  <tr>
+    <td class="gametable"><img src="assets/mystery-card-1.gif" class="cardgame"></td>
+    <td class="gametable"><img src="assets/mystery-card-2.gif" class="cardgame"></td>
+    <td class="gametable"><img src="assets/mystery-card-3.gif" class="cardgame"></td>
+  </tr>
+  <tr>
+    <td class="gametable"><img src="assets/mystery-card-4.gif" class="cardgame"></td>
+    <td class="gametable"><img src="assets/mystery-card-5.gif" class="cardgame"></td>
+    <td class="gametable"><img src="assets/mystery-card-6.gif" class="cardgame"></td>
+  </tr>
+</table>
+</p>
+
+<p>Please select which cards your number appears on:</p>
+
+<table class="selectiontable">
+  <tr>
+   <td class="choosetable" align="center"><p><label for="purple">Purple</label>
+   <input type="checkbox" id="purple" name="purple"></p></td>
+   <td class="choosetable" align="center"><p><label for="green">Green</label>
+   <input type="checkbox" id="green" name="green"></p></td>
+   <td class="choosetable" align="center"><p><label for="blue">Blue</label>
+   <input type="checkbox" id="blue" name="blue"></p></td>
+ </tr>
+<tr>
+   <td class="choosetable" align="center"><p><label for="pink">Pink</label>
+    <input type="checkbox" id="pink" name="pink"></p></td>
+    <td class="choosetable" align="center"><p><label for="red">Red</label>
+    <input type="checkbox" id="red" name="red"></p></td>
+    <td class="choosetable" align="center"><p><label for="yellow">Yellow</label>
+    <input type="checkbox" id="yellow" name="yellow"></p></td>
+</tr>
+<tr>
+  <td></td>
+  <td class="choosetable" align="center"><button onclick="guessThatNumber()">Guess My Number!</button>
+  </td>
+  <td></td>
+</tr>
+  <tr>
+  <td></td>
+  <td class="choosetable" align="center"><button onclick="location.reload();">Play Again!</button>
+  </td>
+  <td></td>
+</tr>
+
+
+
+<script>
+var purpleCard = 1;
+var greenCard =  2;
+var blueCard = 4;
+var pinkCard = 8;
+var redCard = 16;
+var yellowCard = 32;
+var magicNumber = 0;
+
+function guessThatNumber()
+{
+
+var purpleChecked = document.getElementById("purple").checked;
+var greenChecked = document.getElementById("green").checked;
+var blueChecked = document.getElementById("blue").checked;
+var pinkChecked = document.getElementById("pink").checked;
+var redChecked = document.getElementById("red").checked;
+var yellowChecked = document.getElementById("yellow").checked;
+
+/*
+console.log(purpleChecked);
+console.log(greenChecked);
+console.log(blueChecked);
+console.log(pinkChecked);
+console.log(redChecked);
+console.log(yellowChecked);
+*/
+if (purpleChecked === true) {
+  magicNumber = magicNumber + purpleCard;
+}
+if (greenChecked === true) {
+  magicNumber = magicNumber + greenCard;
+}
+if (blueChecked === true) {
+  magicNumber = magicNumber + blueCard;
+}
+if (pinkChecked === true) {
+  magicNumber = magicNumber + pinkCard;
+}
+if (redChecked === true) {
+  magicNumber = magicNumber + redCard;
+}
+if (yellowChecked === true) {
+  magicNumber = magicNumber + yellowCard;
+}
+
+//See which IDs are checked
+alert("Your number is: " + magicNumber);
+//Output the number
+}
+
+</script>

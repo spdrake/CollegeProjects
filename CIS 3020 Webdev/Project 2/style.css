@@ -1,0 +1,86 @@
+
+.navbar {
+    background-color: black;
+    overflow: hidden;
+
+}
+
+.navbar a {
+    float: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+
+.navbar a:visited {
+  color:pink;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.header {
+  padding: 10px;
+  text-align: center;
+
+
+}
+
+.footer {
+padding: 10px;
+  text-align:center;
+
+  color: white;
+}
+
+body {
+  background-image: url("assets/scuffedstatic_dark_1920x1234.jpg");
+
+}
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+  font-family: "Georgia", "Verdana", serif;
+
+}
+p {
+  color: white;
+  font-family: "Georgia", "Verdana", serif;
+
+}
+
+img {
+  display: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  width:20%
+}
+
+.vertical-bar {
+    width: auto;
+    float: right;
+    width: 205px;
+    padding: 5px;
+}
+ul {
+  list-style-type:none;
+  margin: 5;
+  padding: 5;
+}
+a {
+  color: yellow;
+}
+a:visited {
+  color: purple;
+}
